@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: Rubik, "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #FCFCFC; }
+
+a {
+  color: #7AC7C9;
+  text-decoration: none; }
+  a:visited {
+    color: #56b8ba; }
+  a:hover {
+    color: #56b8ba; }
+  a:active {
+    color: #8ccfd0; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.Rubik, section h2, #ourApproach h3 {
+  font-family: 'Rubik', sans-serif; }
+
+.uppercase, section h2, #ourApproach h3 {
+  text-transform: uppercase; }
+
+/* Top Image
+------------------------------------------------------------*/
+.top {
+  background-image: url(../images/top.jpg);
+  max-width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 90%; }
+  section h2 {
+    font-size: 3.2rem; }
+
+#ourApproach {
+  background-color: #FCFCFC; }
+  #ourApproach .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #ourApproach h2 {
+    color: #0A1827;
+    margin-bottom: 60px; }
+  #ourApproach .ourApproach-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #EAF9FE;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #ourApproach h3 {
+    color: #0A1827;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold; }
+
+#contact .button {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none; }
+  #contact .button::before, #contact .button ::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    content: ''; }
+#contact .button,
+#contact .button::before,
+#contact .button::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+#contact .button {
+  background-color: #F6ED6A;
+  border: 2px solid #F6ED6A;
+  color: #4c4c4c;
+  line-height: 50px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  #contact .button:hover {
+    background-color: #FCFCFC;
+    border-color: #F6ED6A;
+    color: #ecde0e; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #FCFCFC;
+  padding: 10px 0;
+  text-align: center;
+  color: #4c4c4c; }
+
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: underline; }
+
+  .top {
+    height: 500px; }
+
+  /* Header
+  ------------------------------------------------------------*/
+  #ourApproach .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #ourApproach .ourApproach-box {
+    margin: 0 10px; } }
+
+/*# sourceMappingURL=style.css.map */

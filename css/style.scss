@@ -1,0 +1,187 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+// font-family
+$baseFontFamily : Rubik, "游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$mainColor: #FCFCFC;
+$subColor: #0A1827;
+$subColor2: #7AC7C9;
+$subColor3: #EAF9FE;
+$keyColor: #F6ED6A;
+$fontColor: #4c4c4c;
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $mainColor;
+}
+
+a {
+  @include link-colors($subColor2, darken($subColor2, 10%), lighten($subColor2, 5%), darken($subColor2, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.Rubik {
+  font-family: 'Rubik', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Top Image
+------------------------------------------------------------*/
+.top {
+    background-image: url(../images/top.jpg);
+    max-width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .Rubik;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+// ourApproach
+#ourApproach {
+  background-color: $mainColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+  }
+  h2 {
+    color: $subColor;
+    margin-bottom: 60px;
+  }
+  .ourApproach-box {
+    @include flex(1);
+    margin: 10px 0;
+    padding: 20px;
+    background-color: $subColor3;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  h3 {
+    @extend .Rubik;
+    @extend .uppercase;
+    color: $subColor;
+    margin-bottom:10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+// Contact
+#contact {
+  .button {
+    display: inline-block;
+    width: 200px;
+    height: 54px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 54px;
+    outline: none;
+    &::before,::after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+    }
+  }
+  .button,
+  .button::before,
+  .button::after {
+    @include box-sizing(border-box);
+   -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  
+  
+  .button {
+    background-color: $keyColor;
+    border: 2px solid $keyColor;
+    color: $fontColor;
+    line-height: 50px;
+    @include border-radius(4px);
+    &:hover {
+    background-color: $mainColor;
+    border-color: $keyColor;
+    color: darken($keyColor, 20%);
+    }
+  }
+}
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $mainColor;
+  padding: 10px 0;
+  text-align: center;
+  color: $fontColor;
+}
+
+// PC
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+.top {
+    height: 500px;
+  }
+
+  /* Header
+  ------------------------------------------------------------*/
+
+  // ourApproach
+  #ourApproach {
+    .container {
+      @include flex-direction(row);
+      justify-content: space-between;
+    }
+    .ourApproach-box {
+      margin: 0 10px;
+    }
+  }
+}
